@@ -1,4 +1,4 @@
-name: Prepare and Upload Artifact
+name: (Bash)Prepare and Upload Artifact
 
 on:
   workflow_call:
