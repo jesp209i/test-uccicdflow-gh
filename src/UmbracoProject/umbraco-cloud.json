@@ -1,7 +1,17 @@
 {
   "Deploy": {
     "Project": {
-      "Workspaces": []
+      "Name": "use live as target github",
+      "Alias": "use-live-as-target-github",
+      "Id": "17a94b61-3af0-4fa5-b5fb-b80440300a72",
+      "Workspaces": [
+        {
+          "Id": "2c47a87d-8aa1-457f-b9c0-e1af3eb4d223",
+          "Name": "Live",
+          "Type": "live",
+          "Url": "https://use-live-as-target-github.euwest01.umbraco.io"
+        }
+      ]
     },
     "Settings": {}
   },
