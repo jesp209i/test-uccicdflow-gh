@@ -13,6 +13,12 @@
           "Url": "https://dev-use-live-as-target-github.euwest01.umbraco.io"
         },
         {
+          "Id": "6c81ebcd-1390-4aac-9810-0d98cd044ba1",
+          "Name": "Staging",
+          "Type": "staging",
+          "Url": "https://stage-use-live-as-target-github.euwest01.umbraco.io"
+        },
+        {
           "Id": "2c47a87d-8aa1-457f-b9c0-e1af3eb4d223",
           "Name": "Live",
           "Type": "live",
