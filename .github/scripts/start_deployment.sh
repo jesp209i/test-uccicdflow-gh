@@ -19,7 +19,7 @@ baseUrl="${9:-https://api.cloud.umbraco.com}"
 # https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd/umbracocloudapi/todo-v2
 #
 url="$baseUrl/v2/projects/$projectId/deployments"
-
+echo "url: $url"
 # Define function to call API to start thedeployment
 function call_api {
   echo "Requesting start Deployment at $url with options:"
