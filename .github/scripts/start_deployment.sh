@@ -19,7 +19,7 @@ baseUrl="${10:-https://api.cloud.umbraco.com}"
 # https://docs.umbraco.com/umbraco-cloud/set-up/project-settings/umbraco-cicd/umbracocloudapi/todo-v2
 #
 url="$baseUrl/v2/projects/$projectId/deployments"
-echo "url: $url"
+
 # Define function to call API to start thedeployment
 function call_api {
   echo "Requesting start Deployment at $url with options:"
@@ -37,8 +37,6 @@ function call_api {
 
   responseCode=${response: -3}  
   content=${response%???}
-
-  echo $response
 
   echo "--- --- ---"
   echo "Response:"
@@ -68,16 +66,13 @@ function call_api {
   errorResponse=$content
   echo "Unexpected API Response Code: $responseCode - More details below"
   # Check if the input is valid JSON
-  echo "$errorResponse" | jq . > /dev/null 2>&1
-  #cat "$errorResponse" | jq . > /dev/null 2>&1
+  cat "$errorResponse" | jq . > /dev/null 2>&1
   if [ $? -ne 0 ]; then
       echo "--- Response RAW ---\n"
-      #cat "$errorResponse"
-      echo "$errorResponse"
+      cat "$errorResponse"
   else 
       echo "--- Response JSON formatted ---\n"
-      #cat "$errorResponse" | jq .
-      echo "$errorResponse" | jq .
+      cat "$errorResponse" | jq .
   fi
   echo "\n---Response End---"
   exit 1
