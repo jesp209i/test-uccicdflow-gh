@@ -38,6 +38,8 @@ function call_api {
   responseCode=${response: -3}  
   content=${response%???}
 
+  echo $response
+
   echo "--- --- ---"
   echo "Response:"
   echo $content
