@@ -35,7 +35,11 @@ jobs:
   hest:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "restore: ${{ github.event.inputs.skipBuildAndRestore }} version: ${{ github.event.inputs.skipVersionCheck }} target: ${{ github.event.inputs.allowAnyTarget }}"
+      - name: Print input values
+        run: |
+          echo "restore: ${{ github.event.inputs.skipBuildAndRestore }}"
+          echo "version: ${{ github.event.inputs.skipVersionCheck }}"
+          echo "target: ${{ github.event.inputs.allowAnyTarget }}"
   # Deploy to Umbraco Cloud
   # ####
   # you can edit the variables noBuildAndRestore, skipVersionCheck and allowAnyTarget
